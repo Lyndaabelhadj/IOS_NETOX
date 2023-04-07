@@ -1,0 +1,816 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BB7EF77C60C8FB4D559D69E /* Pods_netox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6C3241D7EBAC0D7E304D3 /* Pods_netox.framework */; };
+		6B75188129DF9EFB008DDAD7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188029DF9EFB008DDAD7 /* HomeView.swift */; };
+		6B75188329DFA2D1008DDAD7 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */; };
+		6B75188829DFBEB8008DDAD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188729DFBEB8008DDAD7 /* LoginViewModel.swift */; };
+		6B75188A29DFBEDB008DDAD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188929DFBEDB008DDAD7 /* User.swift */; };
+		6B75189129DFD569008DDAD7 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75189029DFD569008DDAD7 /* SignUpViewModel.swift */; };
+		6B75189329DFD5E1008DDAD7 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75189229DFD5E1008DDAD7 /* ProfileViewModel.swift */; };
+		6BD500CE29DF6BC8009C6A65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD500CD29DF6BC8009C6A65 /* ProfileView.swift */; };
+		6BD500D029DF7CA2009C6A65 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD500CF29DF7CA2009C6A65 /* IntroView.swift */; };
+		BF10339229DE1ADC0086F362 /* netoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10339129DE1ADC0086F362 /* netoxApp.swift */; };
+		BF10339429DE1ADC0086F362 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10339329DE1ADC0086F362 /* ContentView.swift */; };
+		BF10339629DE1ADF0086F362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF10339529DE1ADF0086F362 /* Assets.xcassets */; };
+		BF10339929DE1ADF0086F362 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF10339829DE1ADF0086F362 /* Preview Assets.xcassets */; };
+		BF1033A329DE1ADF0086F362 /* netoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1033A229DE1ADF0086F362 /* netoxTests.swift */; };
+		BF1033AD29DE1AE00086F362 /* netoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1033AC29DE1AE00086F362 /* netoxUITests.swift */; };
+		BF1033AF29DE1AE00086F362 /* netoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1033AE29DE1AE00086F362 /* netoxUITestsLaunchTests.swift */; };
+		BFE4968829DE1FA40093B639 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4968729DE1FA40093B639 /* LoginView.swift */; };
+		BFE4968A29DE1FC70093B639 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4968929DE1FC70093B639 /* SignUpView.swift */; };
+		BFE4968D29DE20980093B639 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4968C29DE20980093B639 /* CustomViews.swift */; };
+		BFF0FC0C29DE555900CE6ED1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0FC0B29DE555900CE6ED1 /* SplashScreen.swift */; };
+		F57DFBC1E66A124908F232E2 /* Pods_netoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EDEB22D093BC141BD9EEAC /* Pods_netoxTests.framework */; };
+		F65CD51DD9FC31526A6BDF50 /* Pods_netox_netoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4454049B35CF19987A1521 /* Pods_netox_netoxUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF10339F29DE1ADF0086F362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF10338629DE1ADC0086F362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF10338D29DE1ADC0086F362;
+			remoteInfo = netox;
+		};
+		BF1033A929DE1AE00086F362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF10338629DE1ADC0086F362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF10338D29DE1ADC0086F362;
+			remoteInfo = netox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43C6C3241D7EBAC0D7E304D3 /* Pods_netox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBF1FDE819646E0D9606D70 /* Pods-netoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netoxTests.debug.xcconfig"; path = "Target Support Files/Pods-netoxTests/Pods-netoxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B75188029DF9EFB008DDAD7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		6B75188729DFBEB8008DDAD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6B75188929DFBEDB008DDAD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6B75189029DFD569008DDAD7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		6B75189229DFD5E1008DDAD7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		6BD500CD29DF6BC8009C6A65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		6BD500CF29DF7CA2009C6A65 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		8ABF2D6B09E6FC862149D233 /* Pods-netox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netox.release.xcconfig"; path = "Target Support Files/Pods-netox/Pods-netox.release.xcconfig"; sourceTree = "<group>"; };
+		BF10338E29DE1ADC0086F362 /* netox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF10339129DE1ADC0086F362 /* netoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netoxApp.swift; sourceTree = "<group>"; };
+		BF10339329DE1ADC0086F362 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF10339529DE1ADF0086F362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF10339829DE1ADF0086F362 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF10339E29DE1ADF0086F362 /* netoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = netoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1033A229DE1ADF0086F362 /* netoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netoxTests.swift; sourceTree = "<group>"; };
+		BF1033A829DE1ADF0086F362 /* netoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = netoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1033AC29DE1AE00086F362 /* netoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netoxUITests.swift; sourceTree = "<group>"; };
+		BF1033AE29DE1AE00086F362 /* netoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BFE4968729DE1FA40093B639 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BFE4968929DE1FC70093B639 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BFE4968C29DE20980093B639 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		BFF0FC0B29DE555900CE6ED1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CB0FE6C8C4194BD51D41CFDA /* Pods-netox-netoxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netox-netoxUITests.debug.xcconfig"; path = "Target Support Files/Pods-netox-netoxUITests/Pods-netox-netoxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC51DD312071DB5AA1A1C00A /* Pods-netoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netoxTests.release.xcconfig"; path = "Target Support Files/Pods-netoxTests/Pods-netoxTests.release.xcconfig"; sourceTree = "<group>"; };
+		E2EDEB22D093BC141BD9EEAC /* Pods_netoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AA232A732ABBF220E10C39 /* Pods-netox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netox.debug.xcconfig"; path = "Target Support Files/Pods-netox/Pods-netox.debug.xcconfig"; sourceTree = "<group>"; };
+		EF4454049B35CF19987A1521 /* Pods_netox_netoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netox_netoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6D0F48E2AE93C556E89311 /* Pods-netox-netoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netox-netoxUITests.release.xcconfig"; path = "Target Support Files/Pods-netox-netoxUITests/Pods-netox-netoxUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF10338B29DE1ADC0086F362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BB7EF77C60C8FB4D559D69E /* Pods_netox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF10339B29DE1ADF0086F362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57DFBC1E66A124908F232E2 /* Pods_netoxTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF1033A529DE1ADF0086F362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65CD51DD9FC31526A6BDF50 /* Pods_netox_netoxUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B75187F29DF8677008DDAD7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B75188929DFBEDB008DDAD7 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B75188429DFB7CB008DDAD7 /* ModelViews */ = {
+			isa = PBXGroup;
+			children = (
+				6B75188729DFBEB8008DDAD7 /* LoginViewModel.swift */,
+				6B75189029DFD569008DDAD7 /* SignUpViewModel.swift */,
+				6B75189229DFD5E1008DDAD7 /* ProfileViewModel.swift */,
+			);
+			path = ModelViews;
+			sourceTree = "<group>";
+		};
+		AE849666D6FFAA57BD5C5FA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA232A732ABBF220E10C39 /* Pods-netox.debug.xcconfig */,
+				8ABF2D6B09E6FC862149D233 /* Pods-netox.release.xcconfig */,
+				CB0FE6C8C4194BD51D41CFDA /* Pods-netox-netoxUITests.debug.xcconfig */,
+				FA6D0F48E2AE93C556E89311 /* Pods-netox-netoxUITests.release.xcconfig */,
+				4DBF1FDE819646E0D9606D70 /* Pods-netoxTests.debug.xcconfig */,
+				DC51DD312071DB5AA1A1C00A /* Pods-netoxTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF68D1749D0B7E4883C97D69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43C6C3241D7EBAC0D7E304D3 /* Pods_netox.framework */,
+				EF4454049B35CF19987A1521 /* Pods_netox_netoxUITests.framework */,
+				E2EDEB22D093BC141BD9EEAC /* Pods_netoxTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF10338529DE1ADC0086F362 = {
+			isa = PBXGroup;
+			children = (
+				BF10339029DE1ADC0086F362 /* netox */,
+				BF1033A129DE1ADF0086F362 /* netoxTests */,
+				BF1033AB29DE1AE00086F362 /* netoxUITests */,
+				BF10338F29DE1ADC0086F362 /* Products */,
+				AE849666D6FFAA57BD5C5FA0 /* Pods */,
+				AF68D1749D0B7E4883C97D69 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF10338F29DE1ADC0086F362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF10338E29DE1ADC0086F362 /* netox.app */,
+				BF10339E29DE1ADF0086F362 /* netoxTests.xctest */,
+				BF1033A829DE1ADF0086F362 /* netoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF10339029DE1ADC0086F362 /* netox */ = {
+			isa = PBXGroup;
+			children = (
+				6B75188429DFB7CB008DDAD7 /* ModelViews */,
+				6B75187F29DF8677008DDAD7 /* Models */,
+				BFE4968B29DE1FDD0093B639 /* SupportingViews */,
+				BFE4968629DE1F660093B639 /* Views */,
+				BF10339129DE1ADC0086F362 /* netoxApp.swift */,
+				BF10339329DE1ADC0086F362 /* ContentView.swift */,
+				BF10339529DE1ADF0086F362 /* Assets.xcassets */,
+				BF10339729DE1ADF0086F362 /* Preview Content */,
+			);
+			path = netox;
+			sourceTree = "<group>";
+		};
+		BF10339729DE1ADF0086F362 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BF10339829DE1ADF0086F362 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF1033A129DE1ADF0086F362 /* netoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF1033A229DE1ADF0086F362 /* netoxTests.swift */,
+			);
+			path = netoxTests;
+			sourceTree = "<group>";
+		};
+		BF1033AB29DE1AE00086F362 /* netoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF1033AC29DE1AE00086F362 /* netoxUITests.swift */,
+				BF1033AE29DE1AE00086F362 /* netoxUITestsLaunchTests.swift */,
+			);
+			path = netoxUITests;
+			sourceTree = "<group>";
+		};
+		BFE4968629DE1F660093B639 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE4968729DE1FA40093B639 /* LoginView.swift */,
+				BFE4968929DE1FC70093B639 /* SignUpView.swift */,
+				BFF0FC0B29DE555900CE6ED1 /* SplashScreen.swift */,
+				6BD500CD29DF6BC8009C6A65 /* ProfileView.swift */,
+				6BD500CF29DF7CA2009C6A65 /* IntroView.swift */,
+				6B75188029DF9EFB008DDAD7 /* HomeView.swift */,
+				6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE4968B29DE1FDD0093B639 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFE4968C29DE20980093B639 /* CustomViews.swift */,
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF10338D29DE1ADC0086F362 /* netox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF1033B229DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netox" */;
+			buildPhases = (
+				CB68339E132FE40B97713D4D /* [CP] Check Pods Manifest.lock */,
+				BF10338A29DE1ADC0086F362 /* Sources */,
+				BF10338B29DE1ADC0086F362 /* Frameworks */,
+				BF10338C29DE1ADC0086F362 /* Resources */,
+				D9B1AE5F2A5F218C81B043CB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = netox;
+			productName = netox;
+			productReference = BF10338E29DE1ADC0086F362 /* netox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF10339D29DE1ADF0086F362 /* netoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF1033B529DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netoxTests" */;
+			buildPhases = (
+				5E71D50AC22D79CEB0B016CC /* [CP] Check Pods Manifest.lock */,
+				BF10339A29DE1ADF0086F362 /* Sources */,
+				BF10339B29DE1ADF0086F362 /* Frameworks */,
+				BF10339C29DE1ADF0086F362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF1033A029DE1ADF0086F362 /* PBXTargetDependency */,
+			);
+			name = netoxTests;
+			productName = netoxTests;
+			productReference = BF10339E29DE1ADF0086F362 /* netoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF1033A729DE1ADF0086F362 /* netoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF1033B829DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netoxUITests" */;
+			buildPhases = (
+				ED8A6ADEEA902FCBC6CDB2FF /* [CP] Check Pods Manifest.lock */,
+				BF1033A429DE1ADF0086F362 /* Sources */,
+				BF1033A529DE1ADF0086F362 /* Frameworks */,
+				BF1033A629DE1ADF0086F362 /* Resources */,
+				92CCB2C7B83318A72C303951 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF1033AA29DE1AE00086F362 /* PBXTargetDependency */,
+			);
+			name = netoxUITests;
+			productName = netoxUITests;
+			productReference = BF1033A829DE1ADF0086F362 /* netoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF10338629DE1ADC0086F362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BF10338D29DE1ADC0086F362 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					BF10339D29DE1ADF0086F362 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = BF10338D29DE1ADC0086F362;
+					};
+					BF1033A729DE1ADF0086F362 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = BF10338D29DE1ADC0086F362;
+					};
+				};
+			};
+			buildConfigurationList = BF10338929DE1ADC0086F362 /* Build configuration list for PBXProject "netox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF10338529DE1ADC0086F362;
+			productRefGroup = BF10338F29DE1ADC0086F362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF10338D29DE1ADC0086F362 /* netox */,
+				BF10339D29DE1ADF0086F362 /* netoxTests */,
+				BF1033A729DE1ADF0086F362 /* netoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF10338C29DE1ADC0086F362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF10339929DE1ADF0086F362 /* Preview Assets.xcassets in Resources */,
+				BF10339629DE1ADF0086F362 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF10339C29DE1ADF0086F362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF1033A629DE1ADF0086F362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E71D50AC22D79CEB0B016CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-netoxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92CCB2C7B83318A72C303951 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netox-netoxUITests/Pods-netox-netoxUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netox-netoxUITests/Pods-netox-netoxUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-netox-netoxUITests/Pods-netox-netoxUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB68339E132FE40B97713D4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-netox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B1AE5F2A5F218C81B043CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netox/Pods-netox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netox/Pods-netox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-netox/Pods-netox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8A6ADEEA902FCBC6CDB2FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-netox-netoxUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF10338A29DE1ADC0086F362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B75188129DF9EFB008DDAD7 /* HomeView.swift in Sources */,
+				6B75188329DFA2D1008DDAD7 /* CustomTabBarView.swift in Sources */,
+				6BD500CE29DF6BC8009C6A65 /* ProfileView.swift in Sources */,
+				6BD500D029DF7CA2009C6A65 /* IntroView.swift in Sources */,
+				BFF0FC0C29DE555900CE6ED1 /* SplashScreen.swift in Sources */,
+				BFE4968A29DE1FC70093B639 /* SignUpView.swift in Sources */,
+				6B75189129DFD569008DDAD7 /* SignUpViewModel.swift in Sources */,
+				BFE4968829DE1FA40093B639 /* LoginView.swift in Sources */,
+				6B75189329DFD5E1008DDAD7 /* ProfileViewModel.swift in Sources */,
+				BFE4968D29DE20980093B639 /* CustomViews.swift in Sources */,
+				6B75188A29DFBEDB008DDAD7 /* User.swift in Sources */,
+				6B75188829DFBEB8008DDAD7 /* LoginViewModel.swift in Sources */,
+				BF10339429DE1ADC0086F362 /* ContentView.swift in Sources */,
+				BF10339229DE1ADC0086F362 /* netoxApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF10339A29DE1ADF0086F362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1033A329DE1ADF0086F362 /* netoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF1033A429DE1ADF0086F362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1033AD29DE1AE00086F362 /* netoxUITests.swift in Sources */,
+				BF1033AF29DE1AE00086F362 /* netoxUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF1033A029DE1ADF0086F362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF10338D29DE1ADC0086F362 /* netox */;
+			targetProxy = BF10339F29DE1ADF0086F362 /* PBXContainerItemProxy */;
+		};
+		BF1033AA29DE1AE00086F362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF10338D29DE1ADC0086F362 /* netox */;
+			targetProxy = BF1033A929DE1AE00086F362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BF1033B029DE1AE00086F362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF1033B129DE1AE00086F362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF1033B329DE1AE00086F362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AA232A732ABBF220E10C39 /* Pods-netox.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"netox/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF1033B429DE1AE00086F362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABF2D6B09E6FC862149D233 /* Pods-netox.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"netox/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF1033B629DE1AE00086F362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBF1FDE819646E0D9606D70 /* Pods-netoxTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/netox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/netox";
+			};
+			name = Debug;
+		};
+		BF1033B729DE1AE00086F362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC51DD312071DB5AA1A1C00A /* Pods-netoxTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/netox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/netox";
+			};
+			name = Release;
+		};
+		BF1033B929DE1AE00086F362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0FE6C8C4194BD51D41CFDA /* Pods-netox-netoxUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = netox;
+			};
+			name = Debug;
+		};
+		BF1033BA29DE1AE00086F362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6D0F48E2AE93C556E89311 /* Pods-netox-netoxUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.netoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = netox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF10338929DE1ADC0086F362 /* Build configuration list for PBXProject "netox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1033B029DE1AE00086F362 /* Debug */,
+				BF1033B129DE1AE00086F362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF1033B229DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1033B329DE1AE00086F362 /* Debug */,
+				BF1033B429DE1AE00086F362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF1033B529DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1033B629DE1AE00086F362 /* Debug */,
+				BF1033B729DE1AE00086F362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF1033B829DE1AE00086F362 /* Build configuration list for PBXNativeTarget "netoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1033B929DE1AE00086F362 /* Debug */,
+				BF1033BA29DE1AE00086F362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF10338629DE1ADC0086F362 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_netox_netoxUITests {
+  umbrella header "Pods-netox-netoxUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_netox {
+  umbrella header "Pods-netox-umbrella.h"
+
+  export *
+  module * { export * }
+}
