@@ -17,7 +17,7 @@ class ProfileViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     
     func fetchUser() {
-        let url = "http://172.17.2.164:9091/user/profile"
+        let url = "http://172.17.1.22:9090/user/profile"
         
         guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
             self.errorMessage = "Access Token not found"

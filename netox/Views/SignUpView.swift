@@ -11,6 +11,7 @@ struct SignUpView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var email: String = ""
+    @State private var role: String = "user"
     @State private var cpassword: String = ""
     @State var isLinkActive = false
     @State private var isPresented = false
@@ -59,7 +60,28 @@ struct SignUpView: View {
                             
                             VStack (alignment: .trailing){
                             
-                                Button(action: {}, label: {
+                                Button(action: {
+            
+                                    let request = SignupRequest(username: username,email: email,role: role, password: password)
+                                    print(request)
+                                    viewModel.signup(request: request) { result in
+                                        switch result {
+                                        case .success(let response):
+                                            // Handle successful sign up
+                                            print(response)
+                                            // Dismiss the sign in view after successful sign up
+                                            presentationMode.wrappedValue.dismiss()
+                                            
+                                            // Redirect to login page
+                                            presentationMode.wrappedValue.dismiss() // dismiss the current view
+                                            isPresented = false // set isPresented to false to dismiss the sheet
+                                            
+                                        case .failure(let error):
+                                            // Handle error
+                                            print(error.localizedDescription)
+                                        }
+                                    }
+                                }, label: {
                                     CustomButton(title: "SIGN UP", bgColor: "colorblue")
                                         .padding(.top, 10)
                                 })
@@ -80,7 +102,9 @@ struct SignUpView: View {
                                         
                                         Spacer()
                                         
-                                        Button(action: {}, label: {
+                                        Button(action: {
+                                            
+                                        }, label: {
                                             Image("gmail")
                                                 .resizable()
                                                 .frame(width: 30,height: 30)
@@ -105,29 +129,7 @@ struct SignUpView: View {
                             .font(.system(size: 18))
                         NavigationLink(destination: LoginView(), isActive: $isLinkActive) {
                             Button(action: {
-                               // self.isLinkActive = true
-                                
-                                let request = SignupRequest(username: username, email: email, password: password)
-                                viewModel.signup(request: request) { result in
-                                    switch result {
-                                    case .success(let response):
-                                        // Handle successful sign up
-                                        print(response)
-                                        // Dismiss the sign in view after successful sign up
-                                        presentationMode.wrappedValue.dismiss()
-                                        
-                                        // Redirect to login page
-                                        presentationMode.wrappedValue.dismiss() // dismiss the current view
-                                        isPresented = false // set isPresented to false to dismiss the sheet
-                                        
-                                    case .failure(let error):
-                                        // Handle error
-                                        print(error.localizedDescription)
-                                    }
-                                }
-                                
-                                
-                                
+                                self.isLinkActive = true
                             }, label: {
                                 Text("SIGN IN")
                                     .font(.system(size: 18))

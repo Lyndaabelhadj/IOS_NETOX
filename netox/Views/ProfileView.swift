@@ -58,7 +58,7 @@ struct ProfileView: View {
                             VStack (alignment: .trailing){
                             
                                 Button(action: {}, label: {
-                                    CustomButton(title: "Update", bgColor: "colorblue")
+                                    CustomButton(title: "confirm", bgColor: "colorblue")
                                         .padding(.top, 10)
                                 })
                             } .padding(.horizontal, 10)

@@ -13,11 +13,13 @@ class LoginViewModel: ObservableObject {
     var errorMessage: String?
     
     func login(request: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.164:9090/user/login"
+        let url = "http://172.17.0.169:9095/user/login"
 
         do {
             let encodedRequest = try JSONEncoder().encode(request)
             var urlRequest = try URLRequest(url: url, method: .post)
+            urlRequest.timeoutInterval = 30 // Définit le délai d'attente à 30 secondes
+            
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = encodedRequest
             
@@ -41,6 +43,7 @@ class LoginViewModel: ObservableObject {
                             completion(.failure(error))
                     }
                 }
+                
         } catch {
             print(error)
             completion(.failure(error))

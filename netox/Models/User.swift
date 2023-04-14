@@ -21,8 +21,12 @@ import Foundation
 struct SignupRequest: Encodable {
     let username: String
     let email: String
-    let role: String="user"
+    let role: String
     let password: String
+}
+
+struct MessageResponse: Decodable {
+    let message: String
 }
 
 struct SignupResponse: Decodable {
@@ -44,6 +48,26 @@ struct LoginResponse: Decodable {
     let user: User
 }
 
+struct SendMailRequest: Encodable {
+    let email: String
+}
+
+struct VerifyCodeRequest: Encodable {
+    let email: String
+    let codeForget: String
+}
+struct ResetPasswordRequest: Encodable {
+    let email: String
+    let codeForget: String
+    let password: String
+}
+struct ChangePasswordRequest: Encodable {
+    let _id: String
+    let username: String
+    let email: String
+    let password: String
+    let newPassword: String
+}
 
 struct User: Decodable {
     let _id: String

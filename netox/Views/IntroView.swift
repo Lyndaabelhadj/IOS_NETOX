@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IntroView: View {
-   
+    @State var isLinkActive = false
     var body: some View {
         OnboardingScreen()
     }
@@ -23,6 +23,7 @@ struct IntroView_Previews: PreviewProvider {
 
 //HOME SCREEN
 struct Home: View {
+   // @State var isLinkActive = false
     var body: some View {
         VStack {
             Text("Welcome to Home Screen")
@@ -39,12 +40,12 @@ struct OnboardingScreen: View {
         ZStack {
             VStack{
                 HStack{
-                    Text("Hello")
+                   /* Text("Hello")
                         .font(.title)
                         .fontWeight(.semibold)
                         .kerning(1.4)
                         .foregroundColor(Color("colorblue"))
-                    
+                    */
                     Spacer()
                     
                     Button(action: {}, label: {
@@ -75,7 +76,7 @@ struct OnboardingScreen: View {
                     .foregroundColor(Color("colorblue"))
                     .multilineTextAlignment(.center)
                 
-                Text("Take a DIGITL DETOX")
+                Text("Take a DIGITAL DETOX")
                     .font(.body)
                     .fontWeight(.regular)
                     .kerning(1.2)

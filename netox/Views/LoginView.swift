@@ -15,6 +15,7 @@ struct LoginView: View {
     @State private var loginSuccess = false
     @State private var redirectToHomePage = false
     @State var isLinkActive = false
+    @State var isLinkActiveforgetpass = false
     
     @Environment (\.presentationMode) var presentationMode
     
@@ -55,8 +56,12 @@ struct LoginView: View {
                             
                             
                             VStack {
-                                Text("Forget Password")
-                                    .fontWeight(.medium)
+                              
+                                NavigationLink(destination: ForgetPasswordView(), isActive: $isLinkActiveforgetpass) {
+                                  Text("Forget Password ?")
+                                        .fontWeight(.medium)
+                               }
+                                
                                 
                                 NavigationLink(destination: SignUpView(), isActive: $isLinkActive) {
                                     
