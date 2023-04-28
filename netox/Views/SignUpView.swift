@@ -143,11 +143,11 @@ struct SignUpView: View {
                     .background(Color("colorblue"))
                     .ignoresSafeArea()
                 }
-                TopBarView()
+                
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        .navigationBarHidden(true)
+        //.navigationBarHidden(true)
         
         
         

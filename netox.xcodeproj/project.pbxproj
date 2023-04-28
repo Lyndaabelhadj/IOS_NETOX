@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4BB7EF77C60C8FB4D559D69E /* Pods_netox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6C3241D7EBAC0D7E304D3 /* Pods_netox.framework */; };
+		6B6662FC29FB11FF00333A07 /* Rdv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6662FB29FB11FF00333A07 /* Rdv.swift */; };
+		6B6662FE29FB121D00333A07 /* RdvViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6662FD29FB121D00333A07 /* RdvViewModel.swift */; };
+		6B66630029FB123300333A07 /* RdvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6662FF29FB123300333A07 /* RdvView.swift */; };
+		6B66630429FB21F700333A07 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66630329FB21F700333A07 /* ArticleView.swift */; };
+		6B66630629FB284100333A07 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66630529FB284100333A07 /* Article.swift */; };
+		6B66630829FB3D1D00333A07 /* ArticleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66630729FB3D1D00333A07 /* ArticleDetailsView.swift */; };
 		6B75188129DF9EFB008DDAD7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188029DF9EFB008DDAD7 /* HomeView.swift */; };
 		6B75188329DFA2D1008DDAD7 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */; };
 		6B75188829DFBEB8008DDAD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75188729DFBEB8008DDAD7 /* LoginViewModel.swift */; };
@@ -58,6 +64,12 @@
 /* Begin PBXFileReference section */
 		43C6C3241D7EBAC0D7E304D3 /* Pods_netox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBF1FDE819646E0D9606D70 /* Pods-netoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netoxTests.debug.xcconfig"; path = "Target Support Files/Pods-netoxTests/Pods-netoxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B6662FB29FB11FF00333A07 /* Rdv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rdv.swift; sourceTree = "<group>"; };
+		6B6662FD29FB121D00333A07 /* RdvViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdvViewModel.swift; sourceTree = "<group>"; };
+		6B6662FF29FB123300333A07 /* RdvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdvView.swift; sourceTree = "<group>"; };
+		6B66630329FB21F700333A07 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		6B66630529FB284100333A07 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		6B66630729FB3D1D00333A07 /* ArticleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsView.swift; sourceTree = "<group>"; };
 		6B75188029DF9EFB008DDAD7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		6B75188729DFBEB8008DDAD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -128,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				6B75188929DFBEDB008DDAD7 /* User.swift */,
+				6B6662FB29FB11FF00333A07 /* Rdv.swift */,
+				6B66630529FB284100333A07 /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +154,7 @@
 				6B75189229DFD5E1008DDAD7 /* ProfileViewModel.swift */,
 				6BCF1B9829E9121B0080557D /* ForgetPasswordViewModel.swift */,
 				6BCF1B9A29E922A30080557D /* ChangePasswordViewModel.swift */,
+				6B6662FD29FB121D00333A07 /* RdvViewModel.swift */,
 			);
 			path = ModelViews;
 			sourceTree = "<group>";
@@ -244,6 +259,9 @@
 				6BCF1B9029E8B86B0080557D /* ResetPasswordView.swift */,
 				6BCF1B9229E8C6450080557D /* ProfileUpdatedView.swift */,
 				6BCF1B9429E8CA370080557D /* PasswordUpdatedview.swift */,
+				6B6662FF29FB123300333A07 /* RdvView.swift */,
+				6B66630329FB21F700333A07 /* ArticleView.swift */,
+				6B66630729FB3D1D00333A07 /* ArticleDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -494,20 +512,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B66630629FB284100333A07 /* Article.swift in Sources */,
+				6B6662FE29FB121D00333A07 /* RdvViewModel.swift in Sources */,
 				6B75188129DF9EFB008DDAD7 /* HomeView.swift in Sources */,
 				6B75188329DFA2D1008DDAD7 /* CustomTabBarView.swift in Sources */,
+				6B6662FC29FB11FF00333A07 /* Rdv.swift in Sources */,
 				6BCF1B8D29E8A8860080557D /* QuizView.swift in Sources */,
 				6BD500CE29DF6BC8009C6A65 /* ProfileView.swift in Sources */,
 				6BCF1B9B29E922A30080557D /* ChangePasswordViewModel.swift in Sources */,
 				6BD500D029DF7CA2009C6A65 /* IntroView.swift in Sources */,
 				BFF0FC0C29DE555900CE6ED1 /* SplashScreen.swift in Sources */,
 				6BCF1B9329E8C6450080557D /* ProfileUpdatedView.swift in Sources */,
+				6B66630829FB3D1D00333A07 /* ArticleDetailsView.swift in Sources */,
 				BFE4968A29DE1FC70093B639 /* SignUpView.swift in Sources */,
 				6B75189129DFD569008DDAD7 /* SignUpViewModel.swift in Sources */,
 				6BCF1B8F29E8B7A70080557D /* ForgetPasswordView.swift in Sources */,
 				BFE4968829DE1FA40093B639 /* LoginView.swift in Sources */,
 				6B75189329DFD5E1008DDAD7 /* ProfileViewModel.swift in Sources */,
+				6B66630029FB123300333A07 /* RdvView.swift in Sources */,
 				6BCF1B9529E8CA370080557D /* PasswordUpdatedview.swift in Sources */,
+				6B66630429FB21F700333A07 /* ArticleView.swift in Sources */,
 				BFE4968D29DE20980093B639 /* CustomViews.swift in Sources */,
 				6BCF1B9929E9121B0080557D /* ForgetPasswordViewModel.swift in Sources */,
 				6B75188A29DFBEDB008DDAD7 /* User.swift in Sources */,
@@ -676,6 +700,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"netox/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -705,6 +730,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"netox/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

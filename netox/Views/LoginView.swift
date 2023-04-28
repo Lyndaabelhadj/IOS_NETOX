@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LoginView: View {
     @StateObject var loginViewModel = LoginViewModel()
@@ -15,14 +16,20 @@ struct LoginView: View {
     @State private var loginSuccess = false
     @State private var redirectToHomePage = false
     @State var isLinkActive = false
+    @State var showHomePageView = false
+    @State var isUnlocked = false
     @State var isLinkActiveforgetpass = false
+    
+    
     
     @Environment (\.presentationMode) var presentationMode
     
     var body: some View {
       
         NavigationView {
+    
             ZStack (alignment: .topLeading) {
+   
                 VStack {
                     VStack (spacing: 40) {
                         ZStack{
@@ -46,7 +53,21 @@ struct LoginView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading,20)
                          
-                             
+                            VStack{
+                                if isUnlocked {
+                                    NavigationLink("", destination: HomeView(), isActive: $showHomePageView)
+                                }else {
+                                    Image(systemName: "faceid")
+                                        .resizable()
+                                        .frame(width: 50,height: 50)
+                                        .foregroundColor(.black)
+                                        .padding(.top,100)
+                                        .onTapGesture {
+                                            authenticateWithBiometrics()
+                                           
+                                        }
+                                }
+                            }
                         }
                         VStack (spacing: 30){
                             VStack (spacing: 30){
@@ -148,11 +169,44 @@ struct LoginView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden()
         
         
         
     }
+    private func authenticateWithBiometrics() {
+                let context = LAContext()
+                var error: NSError?
+                
+                if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                    let reason = "Log in with Face ID"
+                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
+                        if success {
+                            DispatchQueue.main.async {
+                                isUnlocked = true
+                                showHomePageView = true
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                let alertController = UIAlertController(title: "Authentication Failed", message: error?.localizedDescription ?? "Please try again", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                alertController.addAction(okAction)
+                                // You can present an alert in SwiftUI using an Alert view
+                                // Alternatively, you can use a Text view and set the text to the error message
+                                // You can also use a Toast view to show a brief message at the bottom of the screen
+                                // Example:
+                                // showAlert = true
+                                // alertMessage = error?.localizedDescription ?? "Please try again"
+                            }
+                        }
+                    }
+                } else {
+                    let alertController = UIAlertController(title: "Face ID Not Available", message: error?.localizedDescription ?? "Your device does not support Face ID", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                    // Same as above
+                }
+            }
 }
 
 struct LoginView_Previews: PreviewProvider {
