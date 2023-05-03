@@ -56,25 +56,26 @@ struct ProfileView: View {
                             
                             
                             VStack (alignment: .trailing){
-                            
+                               
                                 Button(action: {}, label: {
                                     CustomButton(title: "confirm", bgColor: "colorblue")
                                         .padding(.top, 10)
+                                        
                                 })
                             } .padding(.horizontal, 10)
                                
                             VStack (alignment: .trailing){
-                            
+                                
                                 Button(action: {}, label: {
                                     CustomButton(title: "Cancel", bgColor: "colorblue")
-                                        .padding(.top, 10)
+                                        .padding(.bottom, 150)
                                 })
-                            } .padding(.horizontal, 10)
+                            } .padding(.horizontal, 20)
                             
                                 
                         }
                     }
-                    
+                   
                     
                 }
             }

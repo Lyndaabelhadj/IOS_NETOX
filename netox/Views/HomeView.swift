@@ -29,18 +29,23 @@ struct HomeView: View {
         TabView{
             ArticleView()
                 .tabItem(){
-                    Image(systemName: "slider.horizontal.3")
+                    Image(systemName: "doc.text")
                     Text("Articles")
                 }
-            Quiz2View()
+            QuizView()
                 .tabItem(){
-                    Image(systemName: "questionmark.bubble")
+                    Image(systemName: "questionmark.square.dashed")
                     Text("Quiz")
                 }
             RdvView()
                 .tabItem(){
-                    Image(systemName: "envelope")
+                    Image(systemName: "briefcase")
                     Text("Appointment")
+                }
+          localisationView(tt: [] )
+                .tabItem(){
+                    Image(systemName: "mappin")
+                    Text("Localisation")
                 }
             ProfileView()
                 .tabItem(){
