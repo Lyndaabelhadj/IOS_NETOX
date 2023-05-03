@@ -53,21 +53,7 @@ struct LoginView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading,20)
                          
-                            VStack{
-                                if isUnlocked {
-                                    NavigationLink("", destination: HomeView(), isActive: $showHomePageView)
-                                }else {
-                                    Image(systemName: "faceid")
-                                        .resizable()
-                                        .frame(width: 50,height: 50)
-                                        .foregroundColor(.black)
-                                        .padding(.top,100)
-                                        .onTapGesture {
-                                            authenticateWithBiometrics()
-                                           
-                                        }
-                                }
-                            }
+                            
                         }
                         VStack (spacing: 30){
                             VStack (spacing: 30){
@@ -82,7 +68,7 @@ struct LoginView: View {
                                   Text("Forget Password ?")
                                         .fontWeight(.medium)
                                }
-                                
+
                                 
                                 NavigationLink(destination: SignUpView(), isActive: $isLinkActive) {
                                     
@@ -122,6 +108,25 @@ struct LoginView: View {
                                                 
                                         })
                                         
+                                        
+                                        Spacer()
+                                        
+                                        
+                                        VStack{
+                                            if isUnlocked {
+                                                NavigationLink("", destination: HomeView(), isActive: $showHomePageView)
+                                            }else {
+                                                Image(systemName: "faceid")
+                                                    .resizable()
+                                                    .frame(width: 50,height: 50)
+                                                    .foregroundColor(.black)
+                                                    .padding(.top,100)
+                                                    .onTapGesture {
+                                                        authenticateWithBiometrics()
+                                                       
+                                                    }
+                                            }
+                                        }
                                         
                                         Spacer()
                                         

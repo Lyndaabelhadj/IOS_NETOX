@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       LoginView()
+      // HomeView()
+        Quiz2View()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        HomeView()
     }
 }
