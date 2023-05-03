@@ -30,6 +30,8 @@
 		6B8DD1962A02CF6C00C9E391 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD1952A02CF6C00C9E391 /* DropdownMenu.swift */; };
 		6B8DD1982A02D2AC00C9E391 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD1972A02D2AC00C9E391 /* Question.swift */; };
 		6B8DD19A2A02D38000C9E391 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD1992A02D38000C9E391 /* QuestionViewModel.swift */; };
+		6B8DD19C2A02E19100C9E391 /* ResultQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD19B2A02E19100C9E391 /* ResultQuizView.swift */; };
+		6B8DD19E2A02EE3E00C9E391 /* AjoutRDVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD19D2A02EE3E00C9E391 /* AjoutRDVView.swift */; };
 		6BCF1B8D29E8A8860080557D /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF1B8C29E8A8860080557D /* QuizView.swift */; };
 		6BCF1B8F29E8B7A70080557D /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF1B8E29E8B7A70080557D /* ForgetPasswordView.swift */; };
 		6BCF1B9129E8B86B0080557D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF1B9029E8B86B0080557D /* ResetPasswordView.swift */; };
@@ -96,6 +98,8 @@
 		6B8DD1952A02CF6C00C9E391 /* DropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
 		6B8DD1972A02D2AC00C9E391 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		6B8DD1992A02D38000C9E391 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		6B8DD19B2A02E19100C9E391 /* ResultQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultQuizView.swift; sourceTree = "<group>"; };
+		6B8DD19D2A02EE3E00C9E391 /* AjoutRDVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutRDVView.swift; sourceTree = "<group>"; };
 		6BCF1B8C29E8A8860080557D /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		6BCF1B8E29E8B7A70080557D /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		6BCF1B9029E8B86B0080557D /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 				6B8DD1912A02CA0000C9E391 /* DropdownMenuListRow.swift */,
 				6B8DD1932A02CA4A00C9E391 /* DropdownMenuList.swift */,
 				6B8DD1952A02CF6C00C9E391 /* DropdownMenu.swift */,
+				6B8DD19B2A02E19100C9E391 /* ResultQuizView.swift */,
+				6B8DD19D2A02EE3E00C9E391 /* AjoutRDVView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				6B6662FC29FB11FF00333A07 /* Rdv.swift in Sources */,
 				6B8DD1962A02CF6C00C9E391 /* DropdownMenu.swift in Sources */,
 				6BCF1B8D29E8A8860080557D /* QuizView.swift in Sources */,
+				6B8DD19C2A02E19100C9E391 /* ResultQuizView.swift in Sources */,
 				6BD500CE29DF6BC8009C6A65 /* ProfileView.swift in Sources */,
 				6BCF1B9B29E922A30080557D /* ChangePasswordViewModel.swift in Sources */,
 				6BD500D029DF7CA2009C6A65 /* IntroView.swift in Sources */,
@@ -562,6 +569,7 @@
 				6B8DD1842A0295CB00C9E391 /* TabButton.swift in Sources */,
 				6B75189129DFD569008DDAD7 /* SignUpViewModel.swift in Sources */,
 				6BCF1B8F29E8B7A70080557D /* ForgetPasswordView.swift in Sources */,
+				6B8DD19E2A02EE3E00C9E391 /* AjoutRDVView.swift in Sources */,
 				6B8DD19A2A02D38000C9E391 /* QuestionViewModel.swift in Sources */,
 				BFE4968829DE1FA40093B639 /* LoginView.swift in Sources */,
 				6B8DD1982A02D2AC00C9E391 /* Question.swift in Sources */,

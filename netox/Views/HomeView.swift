@@ -17,14 +17,39 @@ struct HomeView: View {
                 .ignoresSafeArea()
             //Custom tabbar
             //CustomTabBarView(selectedTab: $selectedTab)
-        }) */
+        })
         ZStack{
             Color("colorblue")
                 .ignoresSafeArea()
             //side menu
            SideMenu(selectedTab: $selectedTab)
+        }*/
+          
+        
+        TabView{
+            ArticleView()
+                .tabItem(){
+                    Image(systemName: "slider.horizontal.3")
+                    Text("Articles")
+                }
+            Quiz2View()
+                .tabItem(){
+                    Image(systemName: "questionmark.bubble")
+                    Text("Quiz")
+                }
+            RdvView()
+                .tabItem(){
+                    Image(systemName: "envelope")
+                    Text("Appointment")
+                }
+            ProfileView()
+                .tabItem(){
+                    Image(systemName: "person.2.fill")
+                    Text("Profile")
+                }
         }
-            
+
+        
       
     }
 }
@@ -36,9 +61,3 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
-// extending view to get screen size
-extension View {
-    func getRect()->CGRect{
-        return UIScreen.main.bounds
-    }
-}

@@ -51,8 +51,8 @@ struct RdvView: View {
                         }
                         VStack (spacing: 20){
                             VStack (spacing: 30){
-                                CustomTextField(placeHolder: "Date", imageName: "person", bColor: "textcolor2", tOpacity: 1.0, value: $date)
-                                CustomTextField(placeHolder: "Heure", imageName: "envelope", bColor: "textcolor2", tOpacity: 1.0, value: $heure)
+                                CustomTextField(placeHolder: "Date", imageName: "rdv", bColor: "textcolor2", tOpacity: 1.0, value: $date)
+                                CustomTextField(placeHolder: "Heure", imageName: "time", bColor: "textcolor2", tOpacity: 1.0, value: $heure)
                         
                             }
                             

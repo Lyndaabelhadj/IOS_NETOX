@@ -24,12 +24,12 @@ struct ErrorResponseQuestion: Decodable {
 }
 
 struct Question: Decodable {
-    let _id: String
     let contenu: String
     let choix1: String
     let choix2: String
     let choix3: String
     let __v: Int
+    let _id: String
 }
 
 struct UpdateQuestionRequest: Encodable {
