@@ -20,6 +20,9 @@ struct SplashScreen: View {
                     animatedGradient.toggle()
                 }
             }
+        
+      
+        
     }
 }
 
