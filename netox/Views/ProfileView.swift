@@ -53,23 +53,30 @@ struct ProfileView: View {
                             VStack (spacing: 30){
                                 CustomTextField(placeHolder: modelViewModel.user?.username ?? "username", imageName: "person", bColor: "textcolor2", tOpacity: 1.0, value: $name)
                                 CustomTextField(placeHolder: modelViewModel.user?.email ?? "email", imageName: "envelope", bColor: "textcolor2", tOpacity: 1.0, value: $email)
-                                CustomTextField(placeHolder: "lock", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $password)
-                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $cpassword)
+                                
                             }
                             
                             
                             VStack (alignment: .trailing){
                                 
-                                Button(action: {}, label: {
+                                Button(action: {
+                                    
+                                    
+                                    
+                                }, label: {
                                     CustomButton(title: "confirm", bgColor: "colorblue")
                                         .padding(.top, 10)
                                     
                                 })
                             } .padding(.horizontal, 10)
                             
+                            
                             VStack (alignment: .trailing){
                                 
-                                Button(action: {}, label: {
+                                Button(action: {
+                                    
+                                    
+                                }, label: {
                                     CustomButton(title: "Cancel", bgColor: "colorblue")
                                         .padding(.bottom, 10)
                                 })
