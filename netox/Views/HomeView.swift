@@ -52,7 +52,10 @@ struct HomeView: View {
                     Image(systemName: "person.2.fill")
                     Text("Profile")
                 }
-        }
+            
+            
+        }.navigationBarBackButtonHidden()
+
 
         
       

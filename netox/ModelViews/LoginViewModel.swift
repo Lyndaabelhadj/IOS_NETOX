@@ -8,16 +8,25 @@
 import Alamofire
 
 class LoginViewModel: ObservableObject {
-    
+ 
     var loginRequest: LoginRequest?
     var errorMessage: String?
     
  
+    @Published var test: Bool = false
+    
+    
+    func logout(){
+        UserDefaults.standard.set(false, forKey: "test")
+        self.test = false
+    }
     
     
     func login(request: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.21.0.1:9095/user/login"
+        let url = "http://172.17.2.61:9095/user/login"
 
+        let userdefault = UserDefaults.standard
+        
         do {
             let encodedRequest = try JSONEncoder().encode(request)
             var urlRequest = try URLRequest(url: url, method: .post)
@@ -35,7 +44,11 @@ class LoginViewModel: ObservableObject {
                             do {
                                 let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
                                 let user = loginResponse.user
-                                print(response.result)// Utilisez cette ligne pour récupérer toutes les informations sur l'utilisateur
+                                print(response.result)
+                                
+                                self.test = true
+                                userdefault.set(self.test, forKey: "test")
+                            // Utilisez cette ligne pour récupérer toutes les informations sur l'utilisateur
                                 completion(.success(loginResponse))
                             } catch {
                                 print(error)

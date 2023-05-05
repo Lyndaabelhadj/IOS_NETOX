@@ -44,7 +44,7 @@ struct Quiz2View: View {
                         
                         DropdownMenu(
                             selectedOption: self.$birthMonth,
-                            placeholder: "Select your birth month",
+                            placeholder: "Select your choice",
                             options: DropdownMenuOption.testAllMonths
                         )
                         

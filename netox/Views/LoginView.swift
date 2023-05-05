@@ -70,7 +70,7 @@ struct LoginView: View {
                                }
 
                                 
-                                NavigationLink(destination: SignUpView(), isActive: $isLinkActive) {
+                                NavigationLink(destination: HomeView(), isActive: $loginSuccess) {
                                     
                                     Button(action: {
                                        // self.isLinkActive = true

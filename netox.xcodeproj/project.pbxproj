@@ -169,9 +169,9 @@
 			children = (
 				6B75188929DFBEDB008DDAD7 /* User.swift */,
 				6B6662FB29FB11FF00333A07 /* Rdv.swift */,
-				6B8DD18D2A02C8BA00C9E391 /* DropDownMenuOption.swift */,
 				6B66630529FB284100333A07 /* Article.swift */,
 				6B8DD1972A02D2AC00C9E391 /* Question.swift */,
+				6B8DD18D2A02C8BA00C9E391 /* DropDownMenuOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,10 +278,11 @@
 		BFE4968629DE1F660093B639 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6BD500CD29DF6BC8009C6A65 /* ProfileView.swift */,
+				BFE4968C29DE20980093B639 /* CustomViews.swift */,
 				BFE4968729DE1FA40093B639 /* LoginView.swift */,
 				BFE4968929DE1FC70093B639 /* SignUpView.swift */,
 				BFF0FC0B29DE555900CE6ED1 /* SplashScreen.swift */,
-				6BD500CD29DF6BC8009C6A65 /* ProfileView.swift */,
 				6BD500CF29DF7CA2009C6A65 /* IntroView.swift */,
 				6B75188029DF9EFB008DDAD7 /* HomeView.swift */,
 				6B75188229DFA2D1008DDAD7 /* CustomTabBarView.swift */,
@@ -311,7 +312,6 @@
 		BFE4968B29DE1FDD0093B639 /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
-				BFE4968C29DE20980093B639 /* CustomViews.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";

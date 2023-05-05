@@ -13,9 +13,12 @@ struct ProfileView: View {
     @State private var password: String = ""
     @State private var cpassword: String = ""
     @State var isLinkActive = false
+    @State var show = false
+    @StateObject var loginViewModel = LoginViewModel()
+
     
     var body: some View {
-        
+    
         NavigationView {
             ZStack (alignment: .topLeading) {
                 
@@ -56,23 +59,39 @@ struct ProfileView: View {
                             
                             
                             VStack (alignment: .trailing){
-                               
+                                
                                 Button(action: {}, label: {
                                     CustomButton(title: "confirm", bgColor: "colorblue")
                                         .padding(.top, 10)
-                                        
+                                    
                                 })
                             } .padding(.horizontal, 10)
-                               
+                            
                             VStack (alignment: .trailing){
                                 
                                 Button(action: {}, label: {
                                     CustomButton(title: "Cancel", bgColor: "colorblue")
-                                        .padding(.bottom, 150)
+                                        .padding(.bottom, 10)
                                 })
-                            } .padding(.horizontal, 20)
+                            } .padding(.horizontal, 10)
                             
+                            //
+                            
+                            NavigationLink(destination: LoginView().navigationBarHidden(true),isActive: $show){
                                 
+                            VStack (alignment: .trailing){
+                                
+                                Button(action: {
+                                    self.show=true
+
+                                    loginViewModel.logout()
+                                    
+                                }, label: {
+                                    CustomButton(title: "Logout", bgColor: "colorgreen")
+                                        .padding(.bottom, 220)
+                                })
+                            } .padding(.horizontal, 10)
+                        }
                         }
                     }
                    
@@ -81,7 +100,7 @@ struct ProfileView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden()
         
         
         

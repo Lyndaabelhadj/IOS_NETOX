@@ -24,7 +24,7 @@ class RdvViewModel: ObservableObject {
     }
     
     func deleteRdv(id: String) {
-        AF.request("http://172.168.167.33:9095/rdv/\(id)", method: .delete).validate().response { [weak self] response in
+        AF.request("http://172.17.2.61:9095/rdv/\(id)", method: .delete).validate().response { [weak self] response in
             switch response.result {
             case .success:
                 self?.rdvs.removeAll { $0._id == id } // Remove the checklist from the array
@@ -35,7 +35,7 @@ class RdvViewModel: ObservableObject {
     }
     
     func addrdv(request: RdvRequest, completion: @escaping (Result<RdvResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.1.22:9095/rdv"
+        let url = "http://172.17.2.61:9095/rdv"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)

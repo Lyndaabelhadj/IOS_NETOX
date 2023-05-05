@@ -59,7 +59,8 @@ struct SignUpView: View {
                             
                             
                             VStack (alignment: .trailing){
-                            
+                                
+                                
                                 Button(action: {
             
                                     let request = SignupRequest(username: username,email: email,role: role, password: password)
@@ -85,6 +86,9 @@ struct SignUpView: View {
                                     CustomButton(title: "SIGN UP", bgColor: "colorblue")
                                         .padding(.top, 10)
                                 })
+                                
+                               
+                                
                             } .padding(.horizontal, 20)
                                     
                                     HStack {
@@ -149,7 +153,7 @@ struct SignUpView: View {
         }
         //.navigationBarHidden(true)
         
-        
+        .navigationBarBackButtonHidden()
         
     }
 }
