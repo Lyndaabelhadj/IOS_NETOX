@@ -15,7 +15,7 @@ struct ProfileView: View {
     @State var isLinkActive = false
     @State var show = false
     @StateObject var loginViewModel = LoginViewModel()
-
+    @StateObject var modelViewModel = ProfileViewModel()
     
     var body: some View {
     
@@ -51,8 +51,8 @@ struct ProfileView: View {
                         }
                         VStack (spacing: 20){
                             VStack (spacing: 30){
-                                CustomTextField(placeHolder: "Name", imageName: "person", bColor: "textcolor2", tOpacity: 1.0, value: $name)
-                                CustomTextField(placeHolder: "Email", imageName: "envelope", bColor: "textcolor2", tOpacity: 1.0, value: $email)
+                                CustomTextField(placeHolder: modelViewModel.user?.username ?? "username", imageName: "person", bColor: "textcolor2", tOpacity: 1.0, value: $name)
+                                CustomTextField(placeHolder: modelViewModel.user?.email ?? "email", imageName: "envelope", bColor: "textcolor2", tOpacity: 1.0, value: $email)
                                 CustomTextField(placeHolder: "lock", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $password)
                                 CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $cpassword)
                             }

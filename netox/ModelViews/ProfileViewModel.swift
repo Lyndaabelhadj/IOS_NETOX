@@ -15,21 +15,28 @@ class ProfileViewModel: ObservableObject {
     
     @Published var user: User?
     @Published var errorMessage: String = ""
+    init(){
+        fetchUser()
+        print(user)
+    }
     
     func fetchUser() {
+        print("aaa")
         let url = "http://172.17.2.61:9095/user/645457d933c7642948002392"
         
-        guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
+       /* guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
             self.errorMessage = "Access Token not found"
             return
-        }
-        
+        }*/
+        let accessToken = "l"
         let headers: HTTPHeaders = [            "Authorization": "Bearer \(accessToken)",            "Content-Type": "application/json"        ]
+
         
         AF.request(url, headers: headers)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseDecodable(of: User.self) { response in
+                print("hhhhh")
                 switch response.result {
                 case .success(let user):
                     self.user = user
