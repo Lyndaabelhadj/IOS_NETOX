@@ -84,7 +84,7 @@ struct ProfileView: View {
                             
                             //
                             
-                            NavigationLink(destination: LoginView().navigationBarHidden(true),isActive: $show){
+                            NavigationLink(destination: LoginView().navigationBarHidden(false),isActive: $show){
                                 
                             VStack (alignment: .trailing){
                                 

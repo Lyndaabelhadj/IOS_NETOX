@@ -21,8 +21,7 @@ class ProfileViewModel: ObservableObject {
     }
     
     func fetchUser() {
-        print("aaa")
-        let url = "http://172.17.2.61:9095/user/645457d933c7642948002392"
+        let url = "http://172.17.2.61:9095/user/6454cd553701e1532804aafa"
         
        /* guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
             self.errorMessage = "Access Token not found"
@@ -36,7 +35,6 @@ class ProfileViewModel: ObservableObject {
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseDecodable(of: User.self) { response in
-                print("hhhhh")
                 switch response.result {
                 case .success(let user):
                     self.user = user
@@ -47,7 +45,7 @@ class ProfileViewModel: ObservableObject {
     }
     
     func updateUser(request: UpdateUserRequest, completion: @escaping () -> Void) {
-        let url = "http://172.17.2.61:9095/user/645457d933c7642948002392"
+        let url = "http://172.17.2.61:9095/user/6454cd553701e1532804aafa"
         
         guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
             self.errorMessage = "Access Token not found"

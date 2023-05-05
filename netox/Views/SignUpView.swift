@@ -16,7 +16,8 @@ struct SignUpView: View {
     @State var isLinkActive = false
     @State private var isPresented = false
     
-    
+    @State private var loginSuccess = false
+
     @ObservedObject var viewModel = SignupViewModel()
 
 
@@ -60,34 +61,36 @@ struct SignUpView: View {
                             
                             VStack (alignment: .trailing){
                                 
-                                
-                                Button(action: {
-            
-                                    let request = SignupRequest(username: username,email: email,role: role, password: password)
-                                    print(request)
-                                    viewModel.signup(request: request) { result in
-                                        switch result {
-                                        case .success(let response):
-                                            // Handle successful sign up
-                                            print(response)
-                                            // Dismiss the sign in view after successful sign up
-                                            presentationMode.wrappedValue.dismiss()
-                                            
-                                            // Redirect to login page
-                                            presentationMode.wrappedValue.dismiss() // dismiss the current view
-                                            isPresented = false // set isPresented to false to dismiss the sheet
-                                            
-                                        case .failure(let error):
-                                            // Handle error
-                                            print(error.localizedDescription)
+                                NavigationLink(destination: LoginView(), isActive: $loginSuccess) {
+                                    Button(action: {
+                                        loginSuccess=true
+
+                                        let request = SignupRequest(username: username,email: email,role: role, password: password)
+                                        print(request)
+                                        viewModel.signup(request: request) { result in
+                                            switch result {
+                                            case .success(let response):
+
+                                                // Handle successful sign up
+                                                print(response)
+                                                // Dismiss the sign in view after successful sign up
+                                                presentationMode.wrappedValue.dismiss()
+                                                
+                                                // Redirect to login page
+                                                presentationMode.wrappedValue.dismiss() // dismiss the current view
+                                                isPresented = false // set isPresented to false to dismiss the sheet
+                                                
+                                            case .failure(let error):
+                                                // Handle error
+                                                print(error.localizedDescription)
+                                            }
                                         }
-                                    }
-                                }, label: {
-                                    CustomButton(title: "SIGN UP", bgColor: "colorblue")
-                                        .padding(.top, 10)
-                                })
-                                
-                               
+                                    }, label: {
+                                        CustomButton(title: "SIGN UP", bgColor: "colorblue")
+                                            .padding(.top, 10)
+                                    })
+                                    
+                                }
                                 
                             } .padding(.horizontal, 20)
                                     

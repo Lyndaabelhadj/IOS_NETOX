@@ -74,7 +74,8 @@ struct LoginView: View {
                                     
                                     Button(action: {
                                        // self.isLinkActive = true
-                                       
+                                       print(username)
+                                        print(password)
                                         let request = LoginRequest(username: username, password: password)
                                         print(request)
                                         loginViewModel.login(request: request) { result in
