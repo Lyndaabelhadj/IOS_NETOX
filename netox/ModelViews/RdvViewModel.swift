@@ -15,6 +15,8 @@ class RdvViewModel: ObservableObject {
     @Published var heure: String = ""
     
     @Published var rdvs = [rdv]()
+    let userID = UserDefaults.standard.string(forKey: "idUser")
+
     
     var rdvRequest: RdvRequest?
     var errorMessage: String?
@@ -24,7 +26,7 @@ class RdvViewModel: ObservableObject {
     }
     
     func deleteRdv(id: String) {
-        AF.request("http://172.17.2.61:9095/rdv/\(id)", method: .delete).validate().response { [weak self] response in
+        AF.request("\(base_url)/rdv/\(id)", method: .delete).validate().response { [weak self] response in
             switch response.result {
             case .success:
                 self?.rdvs.removeAll { $0._id == id } // Remove the checklist from the array
@@ -34,8 +36,8 @@ class RdvViewModel: ObservableObject {
         }
     }
     
-    func addrdv(request: RdvRequest, completion: @escaping (Result<RdvResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.61:9095/rdv"
+    func addrdv(request: RdvRequest, completion: @escaping (Result<rdv, Error>) -> ()) -> DataRequest {
+        let url = "\(base_url)/rdv"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)
@@ -48,7 +50,7 @@ class RdvViewModel: ObservableObject {
                     switch response.result {
                     case .success(let data):
                         do {
-                            let rdvResponse = try JSONDecoder().decode(RdvResponse.self, from: data)
+                            let rdvResponse = try JSONDecoder().decode(rdv.self, from: data)
                             completion(.success(rdvResponse))
                         } catch {
                             print(error)
@@ -87,7 +89,7 @@ class RdvViewModel: ObservableObject {
     
     
     func fetchRdvs( completion: @escaping(Result<[rdv],APIError>) -> Void) {
-        let url = URL(string : "http://192.168.167.33:9092/rdv/user/642f9382de576283773909ba")
+        let url = URL(string : "\(base_url)/rdv/user/\(userID)")
         //createURL(for:   .movie, page: nil, limit: nil)    fetch(type: [checklist].self, url: url, completion: completion)}
         func fetch<T: Decodable>(type: T.Type, url: URL?, completion: @escaping(Result<T,APIError>) -> Void) {
             guard let url = url else {

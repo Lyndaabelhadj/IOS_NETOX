@@ -11,7 +11,7 @@ class LoginViewModel: ObservableObject {
  
     var loginRequest: LoginRequest?
     var errorMessage: String?
-    
+    let userIdKey = "userId"
  
     @Published var test: Bool = false
     
@@ -23,7 +23,7 @@ class LoginViewModel: ObservableObject {
     
     
     func login(request: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.61:9095/user/login"
+        let url = "\(base_url)/user/login"
 
         let userdefault = UserDefaults.standard
         
@@ -45,6 +45,7 @@ class LoginViewModel: ObservableObject {
                                 let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
                                 let user = loginResponse.user
                                 print(response.result)
+                                UserDefaults.standard.set(loginResponse.user._id, forKey: self.userIdKey)
                                 
                                 self.test = true
                                 userdefault.set(self.test, forKey: "test")

@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  netox
+
+  Created by Bout de choux on 11/5/2023.
+  
+*/
+"home"="Acceuil";
+"Appointment"="RDV";
+"Localisation"="Localisation";
+"More"="Plus";
+"Welcome \nto NETOX"="Bienvenu \ndans NETOX";
+"username"="nom";
+"Password"="Mot de passe";
+"Forget Password ?"="Vous avez oublier votre mot de passe?";
+"SIGN IN"="Se connecter";
+"Don't have an account?"="Vous n'avez de compte ?";
+"Log in with Face ID"="connecter avec Face ID";
+"Articles"= "Articles";
+"Quiz"="Quiz";
+"Autre"="Autre";
+"Let's start the quiz"="Commençons le quiz";
+"back"="Retour";
+"SIGN UP"="S'inscrire";
+"SIGN IN"="S'authentifier";
+"username"="Nom de l'utilisateur";
+"Password"="mot de passe";
+"Create \nAccount"="Créer \nun compte";
+"Already have an account?"="Avez vous déja un compte?";
+"Forget Password"="Mot de passe oublié?";
+"Send"="Envoyer";
+"Cancel"="Annuler";
+"Enter your email"="Entrer votre adresse mail";
+"Provide your account's email for which you want to reset your password"="Entrer votre adresse mail si vous voulez récuperer votre mot de passe";
+"Confirm"="Confirmer";
+"confirm"="Confirmer";
+"Make an \nappointment"="Prendre un \nrendez-vous";
+"Save changes"="Sauvegarder";
+"Are you ready to test your level of addiction ?"="Etes-vous pret à tester votre \nniveau de dépendance ?";
+"Let's start"="Commençons";
+"Yes"="Oui";
+"No"="Non";
+"Maybe"="Peut-etre";
+"Welcome to \nyour profile"="Bienvenue dans \nvotre profil";
+"Logout"="Déconnecter";
+"Let's start the Quiz"="Commençons le Quiz";
+"Done"="C'est terminé";
+"Appointment made \nsuccessfully"="Rendez vous pris \navec succès";

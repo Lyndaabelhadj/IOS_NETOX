@@ -11,6 +11,7 @@ struct HomeView: View {
     //selected tab
     @State var selectedTab = "Home"
     
+    
     var body: some View {
        /* ZStack(alignment: .bottom, content: {
             Color("colorblue")
@@ -42,22 +43,22 @@ struct HomeView: View {
                     Image(systemName: "briefcase")
                     Text("Appointment")
                 }
-          localisationView(tt: [] )
+           /* loclalisation()
                 .tabItem(){
-                    Image(systemName: "mappin")
+                   Image(systemName: "mappin")
                     Text("Localisation")
-                }
-            ProfileView()
+                }*/
+            SettingsView()
                 .tabItem(){
-                    Image(systemName: "person.2.fill")
-                    Text("Profile")
+                    Image(systemName: "gear")
+                    Text("Settings")
                 }
             
+        
             
         }.navigationBarBackButtonHidden()
 
 
-        
       
     }
 }

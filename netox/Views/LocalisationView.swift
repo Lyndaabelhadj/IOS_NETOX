@@ -6,6 +6,7 @@
 //
 import MapKit
 import SwiftUI
+
 struct localisationView: View {
     
     struct aa: Identifiable {
@@ -19,17 +20,13 @@ struct localisationView: View {
         
         Map(coordinateRegion: $region, annotationItems: tt) { pointer in
             MapPin(coordinate: region.center,tint: .red)
-//            MapMarker(coordinate: region.center,tint: .red)
         }
-//        .frame(height: 700)
         .onAppear {
             setRegion()
         }
         
         Spacer()
     }
-    
-    
     private func setRegion() {
               let geocoder = CLGeocoder()
            geocoder.geocodeAddressString("tunisie") { placemarks, error in

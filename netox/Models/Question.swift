@@ -23,7 +23,7 @@ struct ErrorResponseQuestion: Decodable {
     let message: String
 }
 
-struct Question: Decodable {
+struct Question:  Codable, Hashable {
     let contenu: String
     let choix1: String
     let choix2: String

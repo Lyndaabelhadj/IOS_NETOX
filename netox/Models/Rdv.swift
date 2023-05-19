@@ -10,6 +10,7 @@ struct RdvRequest: Encodable {
     let date: String
     let heure: String
    
+   
 }
 
 struct RdvResponse: Decodable {

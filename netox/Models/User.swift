@@ -70,7 +70,7 @@ struct ChangePasswordRequest: Encodable {
 }
 
 struct User: Decodable {
-    let _id: String
+    let _id: String?
     let username: String
     let email: String
     let role: String
@@ -81,4 +81,28 @@ struct User: Decodable {
 struct UpdateUserRequest: Encodable {
     let username: String?
     let email: String?
+}
+
+struct UpdateScoreResquest: Encodable , Decodable{
+    let userId: String?
+    let score: Int
+}
+
+struct UpdateScoreResponse: Encodable , Decodable{
+    let _id: String
+    let username: String
+    let email: String
+    let role: String
+    let password: String
+    let score: Int?
+    let createdAt : String
+    let updatedAt : String
+    let __v: Int
+    
+}
+struct UserChangePassword: Codable {
+    let oldpassword: String = ""
+    let newPassword: String = ""
+    let email: String = ""
+
 }

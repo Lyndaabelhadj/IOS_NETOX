@@ -13,10 +13,14 @@ struct ProfileView: View {
     @State private var password: String = ""
     @State private var cpassword: String = ""
     @State var isLinkActive = false
+    @State var isLinkActivee = false
     @State var show = false
     @StateObject var loginViewModel = LoginViewModel()
     @StateObject var modelViewModel = ProfileViewModel()
-    
+    let userID = UserDefaults.standard.string(forKey: "userId")!
+
+    //@State private var isDarkModeEnabled = false
+    @State var isLinkActivebu = false
     var body: some View {
     
         NavigationView {
@@ -26,11 +30,7 @@ struct ProfileView: View {
                     VStack (spacing: 40) {
                         ZStack{
                             
-                            Ellipse()
-                                .frame(width: 510, height: 478)
-                                .padding(.leading, -200)
-                                .foregroundColor(Color("colorgreen"))
-                                .padding(.top, -200)
+                          
                             
                             Ellipse()
                                 .frame(width: 458, height: 420)
@@ -38,16 +38,18 @@ struct ProfileView: View {
                                 .foregroundColor(Color("colorblue"))
                                 .padding(.top, -200)
                             
+                           
+                            
                             Text("Welcome to \nyour profile")
-                                .foregroundColor(.white)
+                                .foregroundColor(.blue)
                                 .font(.system(size: 35))
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading,20)
                                 .padding(.top, 100)
-                         
-                             
+                                .transition(.opacity) // Animation de fondu
+                            
                         }
                         VStack (spacing: 20){
                             VStack (spacing: 30){
@@ -57,34 +59,41 @@ struct ProfileView: View {
                             }
                             
                             
+                        
                             VStack (alignment: .trailing){
-                                
+                                NavigationLink(destination: ProfileUpdatedView(), isActive: $isLinkActivee) {
                                 Button(action: {
-                                    
-                                    
+                                    let request = UpdateUserRequest(username: name, email: email)
+                                    modelViewModel.updateUser(userId1: userID ,request: request){
+                                        self.isLinkActivee = true
+                                    }
                                     
                                 }, label: {
-                                    CustomButton(title: "confirm", bgColor: "colorblue")
+                                    CustomButton(title: "Save changes", bgColor: "colorblue")
                                         .padding(.top, 10)
                                     
-                                })
+                                })  }
                             } .padding(.horizontal, 10)
                             
                             
                             VStack (alignment: .trailing){
-                                
-                                Button(action: {
-                                    
-                                    
-                                }, label: {
-                                    CustomButton(title: "Cancel", bgColor: "colorblue")
-                                        .padding(.bottom, 10)
-                                })
+                            
+                                NavigationLink(destination: HomeView(), isActive: $isLinkActivebu) {
+                                    Button(action: {
+                                        
+                                        self.isLinkActivebu = true
+                                    }, label: {
+                                        CustomButton(title: "Cancel", bgColor: "colorblue")
+                                            .padding(.bottom, 10)
+                                    })}
                             } .padding(.horizontal, 10)
                             
                             //
                             
                             NavigationLink(destination: LoginView().navigationBarHidden(false),isActive: $show){
+                                
+                                
+                                
                                 
                             VStack (alignment: .trailing){
                                 
@@ -92,6 +101,8 @@ struct ProfileView: View {
                                     self.show=true
 
                                     loginViewModel.logout()
+                                    let loginView = LoginView()
+                                    UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: loginView)
                                     
                                 }, label: {
                                     CustomButton(title: "Logout", bgColor: "colorgreen")
@@ -99,17 +110,29 @@ struct ProfileView: View {
                                 })
                             } .padding(.horizontal, 10)
                         }
+                            
+                            
                         }
                     }
-                   
+                  
                     
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
+         
         }
         .navigationBarBackButtonHidden()
         
-        
+//
+//        Toggle("sombre",isOn: $isDarkModeEnabled)
+//            .onChange(of: isDarkModeEnabled) { newValue in
+//                if newValue {
+//                    UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+//                }
+//                else{
+//                    UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+//                }
+//            }
         
     }
 }

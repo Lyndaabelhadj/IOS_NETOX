@@ -57,10 +57,10 @@ struct LoginView: View {
                         }
                         VStack (spacing: 30){
                             VStack (spacing: 30){
-                                CustomTextField(placeHolder: "username", imageName: "envelope", bColor: "textcolor2", tOpacity: 0.6, value: $username)
-                                CustomTextField(placeHolder: "Password", imageName: "lock", bColor: "textcolor2", tOpacity: 0.6, value: $password)
+                                CustomTextField(placeHolder: "username", imageName: "envelope", bColor: "textcolor2", tOpacity: 1.0, value: $username)
+                                CustomTextField(placeHolder: "Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $password)
                             }
-                            
+                     
                             
                             VStack {
                               
@@ -84,6 +84,8 @@ struct LoginView: View {
                                                 // Action si la connexion est réussie
                                                 print(response)
                                                 self.loginSuccess = true // Set login success to true
+                                               
+
                                                 self.redirectToHomePage = true // Set redirectToHomePage to true
                                             case .failure(let error):
                                                 

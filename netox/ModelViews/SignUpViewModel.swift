@@ -14,7 +14,7 @@ class SignupViewModel: ObservableObject {
     var errorMessage: String?
     
     func signup(request: SignupRequest, completion: @escaping (Result<SignupResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.61:9095/user"
+        let url = "\(base_url)/user"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)

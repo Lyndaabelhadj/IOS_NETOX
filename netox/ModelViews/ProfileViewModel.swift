@@ -13,15 +13,21 @@ let userDefaultsKey = "accessToken"
 
 class ProfileViewModel: ObservableObject {
     
+    
+    
     @Published var user: User?
     @Published var errorMessage: String = ""
+    var request: UpdateRdvRequest?
+    let userID = UserDefaults.standard.string(forKey: "userId")!
+
+    
     init(){
         fetchUser()
         print(user)
     }
     
     func fetchUser() {
-        let url = "http://172.17.2.61:9095/user/6454cd553701e1532804aafa"
+        let url = "\(base_url)/user/\(userID)"
         
        /* guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
             self.errorMessage = "Access Token not found"
@@ -44,17 +50,11 @@ class ProfileViewModel: ObservableObject {
             }
     }
     
-    func updateUser(request: UpdateUserRequest, completion: @escaping () -> Void) {
-        let url = "http://172.17.2.61:9095/user/6454cd553701e1532804aafa"
+    func updateUser(userId1: String ,request: UpdateUserRequest, completion: @escaping () -> Void) {
+        let url = "\(base_url)/user/\(userId1)"
+    
         
-        guard let accessToken = UserDefaults.standard.string(forKey: userDefaultsKey) else {
-            self.errorMessage = "Access Token not found"
-            return
-        }
-        
-        let headers: HTTPHeaders = [            "Authorization": "Bearer \(accessToken)",            "Content-Type": "application/json"        ]
-        
-        AF.request(url, method: .patch, parameters: request, encoder: JSONParameterEncoder.default, headers: headers)
+        AF.request(url, method: .patch, parameters: request, encoder: JSONParameterEncoder.default)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { response in

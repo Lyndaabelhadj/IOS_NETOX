@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CoreImage.CIFilterBuiltins
+
 
 struct ArticleDetailsView: View {
+    @State private var qrCodeData: String = ""
+
     var article: Article
     var body: some View {
       
@@ -32,13 +36,20 @@ struct ArticleDetailsView: View {
                 Text(article.description)
                     .font(.body)
                     .padding()
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
                 
-                Spacer()
+               
                 
-                Link(destination: URL(string: "https://www.anahana.com/fr/wellbeing-blog/digital-detox")!, label: {
+                Link(destination: article.url, label: {
                     StandardButton(title: "Watch Now")
                     
                 })
+                
+                QRCodeView(data: qrCodeData)
+                            .frame(width: 100, height: 100).onAppear {
+                                qrCodeData = "\(article.url)"
+                            }
                 
                 //Link(destination: article.url, label: {
                   //  StandardButton(title: "Watch Now")
@@ -62,14 +73,34 @@ struct StandardButton: View {
         .background(Color("colorblue"))
         .foregroundColor(.white)
         .cornerRadius(10)
-        .padding(.bottom, 90)
+        .padding(.bottom, 60)
         
     }
 }
 
         
          
- 
+struct QRCodeView: View {
+    let data: String
+    
+    var body: some View {
+        let filter = CIFilter.qrCodeGenerator()
+        let data = Data(self.data.utf8)
+        filter.setValue(data, forKey: "inputMessage")
+        let ciImage = filter.outputImage
+         
+        let context = CIContext()
+        guard let cgImage = context.createCGImage(ciImage!, from: ciImage!.extent) else {
+            fatalError("Failed to create CGImage from CIImage.")
+        }
+        let uiImage = UIImage(cgImage: cgImage)
+        
+        return Image(uiImage: uiImage)
+            .interpolation(.none)
+            .resizable()
+            .scaledToFit()
+    }
+}
 
 struct ArticleDetailsView_Previews: PreviewProvider {
     static var previews: some View {

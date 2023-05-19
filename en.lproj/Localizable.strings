@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  netox
+
+  Created by Bout de choux on 11/5/2023.
+  
+*/
+"home"="home";
+"Appointment"="Appointment";
+"Localisation"="Localisation";
+"More"="More";
+"Welcome \nto NETOX"="Welcome \nto NETOX";
+"username"="username";
+"Password"="Password";
+"Forget Password ?"="Forget Password ?";
+"SIGN IN"="SIGN IN";
+"Don't have an account?"="Don't have an account?";
+"Log in with Face ID"="Log in with Face ID";
+"Articles"= "Articles";
+"Quiz"="Quiz";
+"Autre"="Autre";
+"Let's start the quiz"="Let's start the quiz";
+"back"="back";
+"SIGN UP"="SIGN UP";
+"SIGN IN"="SIGN UP";
+"username"="username";
+"Password"="Password";
+"Create Account"="Create Account";
+"Already have an account?"="Already have an account?";
+"Enter your email"="Enter your email";
+"Provide your account's email for which you want to reset your password"="Provide your account's email for which you want to reset your password";
+"Confirm"="Confirm";
+"confirm"="confirm";
+"Make an appointement"="Make an appointement";
+"Save changes"="Save changes";
+"Are you ready to test your level of addiction ?"="Are you ready to test your level of addiction ?";
+"Let's start"="Let's start";
+"Yes"="Yes";
+"No"="No";
+"Maybe"="Maybe";
+"Welcome to \nyour profile"="Welcome to \nyour profile";
+"Logout"="Logout";
+"Let's start the Quiz"="Let's start the Quiz";
+"Done"="Done";
+"Appointment made \nsuccessfully"="Appointment made \nsuccessfully";

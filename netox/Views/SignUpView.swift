@@ -63,6 +63,7 @@ struct SignUpView: View {
                                 
                                 NavigationLink(destination: LoginView(), isActive: $loginSuccess) {
                                     Button(action: {
+                                        print(self.password)
                                         loginSuccess=true
 
                                         let request = SignupRequest(username: username,email: email,role: role, password: password)

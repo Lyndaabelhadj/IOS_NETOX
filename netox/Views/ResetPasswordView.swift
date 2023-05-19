@@ -16,7 +16,7 @@ struct ResetPasswordView: View {
     
     
     @ObservedObject var viewModel = SignupViewModel()
-
+    @ObservedObject var viewModelChangePass = ChangePasswordModel()
 
     @Environment(\.presentationMode) var presentationMode
     
@@ -58,8 +58,15 @@ struct ResetPasswordView: View {
                         
                         VStack (spacing: 20){
                             VStack (spacing: 30){
-                                CustomTextField(placeHolder: "New Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $email)
-                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $email)
+                                CustomTextField(placeHolder: "Old Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $viewModelChangePass.oldPassword).onChange(of: viewModelChangePass.oldPassword){
+                                    value in viewModelChangePass.oldPassword
+                                }
+                                CustomTextField(placeHolder: "New Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $viewModelChangePass.newPassword).onChange(of: viewModelChangePass.newPassword){
+                                    value in viewModelChangePass.newPassword
+                                }
+                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "textcolor2", tOpacity: 1.0, value: $viewModelChangePass.confirmPassword).onChange(of: viewModelChangePass.confirmPassword){
+                                    value in viewModelChangePass.confirmPassword
+                                }
                                
                             }
                             

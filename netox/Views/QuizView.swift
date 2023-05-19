@@ -32,8 +32,8 @@ struct QuizView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: Quiz2View(), isActive: $showingLoginView) {
-                        Text("Let's start ")
+                    NavigationLink(destination: Test(), isActive: $showingLoginView) {
+                        Text("Let's start")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
